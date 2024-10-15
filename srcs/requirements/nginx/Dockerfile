@@ -1,9 +1,12 @@
 FROM debian:bullseye
 
-RUN apt update && apt upgrade -y
-RUN apt install -y inetutils-ping nginx openssl curl
-
-RUN mkdir -p /var/www/html \
+RUN apt update && apt upgrade -y && \
+    apt install -y \
+    inetutils-ping \
+    nginx \
+    openssl \
+    curl && \
+    mkdir -p /var/www/html \
     && chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -f "/var/www/html/wp-config.php" ]; then
-	echo "Configuring WordPress..."
+	echo "Preparing WordPress..."
 
 	wp config create --allow-root					\
 					--dbname=$MDB_NAME				\
@@ -26,7 +26,7 @@ if [ ! -f "/var/www/html/wp-config.php" ]; then
 	wp option update home 'https://mkramer.42.fr' --allow-root
 	wp option update siteurl 'https://mkramer.42.fr' --allow-root
 else
-	echo "WordPress is already configured."
+	echo "WordPress is already ready."
 fi
 
 exec "$@"

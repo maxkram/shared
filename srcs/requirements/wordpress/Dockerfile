@@ -2,8 +2,9 @@ FROM debian:bullseye
 
 COPY . .
 
-RUN apt update && apt upgrade -y
-RUN apt -y install wget curl netcat php php-mysql php-fpm php-cli mariadb-client
+RUN apt update && apt upgrade -y && \
+    apt -y install wget curl netcat \
+    php php-mysql php-fpm php-cli mariadb-client
 
 RUN mkdir -p /run/php /var/www/html \
     && chown -R www-data:www-data /run/php /var/www/html
