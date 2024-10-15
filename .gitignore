@@ -1,0 +1,10 @@
+data
+/home/mkramer/data/
+
+*.log
+*.tmp
+*.pid
+*.sock
+*.tar
+
+.env

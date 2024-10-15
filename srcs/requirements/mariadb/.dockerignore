@@ -1,0 +1,7 @@
+/home/mkramer/data/
+
+# Ignore unnecessary local files
+.git
+.gitignore
+.env
+*.log
